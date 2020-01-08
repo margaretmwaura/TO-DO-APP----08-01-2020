@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class pagescontroller extends Controller
+class Pagescontroller extends Controller
 {
     //
     public function index()
     {
-        return view('pages.index');
+        return view('create');
     }
 
 }

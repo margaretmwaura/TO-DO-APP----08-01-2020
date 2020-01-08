@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/create', 'Pagescontroller@index');
+
+Route::resource('todos','CreateToDoController');
