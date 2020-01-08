@@ -12,10 +12,10 @@
         </thead>
         <tbody>
         <tr>
-            <td>Driver Name</td>
-            <td>John Doe</td>
-            <td>Mary Sue</td>
-            <td>Mary Sue</td>
+            <td>{{ $onetodo -> id }}</td>
+            <td>{{ $onetodo -> title  }}</td>
+            <td>{{ $onetodo -> message }}</td>
+            <td>{{$onetodo -> date}}</td>
         </tr>
         </tbody>
     </table>

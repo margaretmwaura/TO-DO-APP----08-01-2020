@@ -14,7 +14,7 @@
         </div>
         <div class ="form-group">
             {{Form::label('time','When is your to do due')}}
-            {{Form::date('dob', \Carbon\Carbon::now())}}
+            {{Form::text('dob', ' ')}}
         </div>
         {{Form::submit('Submit',['class' => "submit"]) }}
         {!! Form::close() !!}

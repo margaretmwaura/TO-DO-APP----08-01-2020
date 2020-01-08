@@ -20,7 +20,8 @@ class CreateToDoController extends Controller
            $onetodo -> date = $time;
 
 
-           echo "Details entered " . $onetodo;
+           $onetodo -> save();
+           echo "Details entered " . $onetodo -> todo_id;
             return view('display')->with('onetodo',$onetodo);
 
         }
