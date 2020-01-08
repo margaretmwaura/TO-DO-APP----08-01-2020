@@ -21,8 +21,10 @@ class CreateToDoController extends Controller
 
 
            $onetodo -> save();
-           echo "Details entered " . $onetodo -> todo_id;
-            return view('display')->with('onetodo',$onetodo);
+
+           $notes = ToDo::all();
+
+            return view('display')->with('notes',$notes);
 
         }
 }

@@ -7,16 +7,21 @@
             <th>ID</th>
             <th>TITLE</th>
             <th>MESSAGE</th>
-            <th>DATE</th>
+            <th>DAY</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
         </tr>
         </thead>
         <tbody>
+        @foreach ($notes as $note)
         <tr>
-            <td>{{ $onetodo -> id }}</td>
-            <td>{{ $onetodo -> title  }}</td>
-            <td>{{ $onetodo -> message }}</td>
-            <td>{{$onetodo -> date}}</td>
+            <td>{{ $note -> id }}</td>
+            <td>{{ $note -> title  }}</td>
+            <td>{{ $note -> message }}</td>
+            <td>{{ $note -> date}}</td>
+            <td><button>DELETE</button></td>
         </tr>
+            @endforeach
         </tbody>
     </table>
 

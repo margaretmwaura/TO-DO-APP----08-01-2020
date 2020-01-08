@@ -10,11 +10,11 @@
         </div>
         <div class ="form-group">
             {{Form::label('message','Describe your To Do')}}
-            {{Form::textarea('message',' ')}}
+            {{Form::text('message',' ')}}
         </div>
         <div class ="form-group">
             {{Form::label('time','When is your to do due')}}
-            {{Form::text('dob', ' ')}}
+            {{Form::date('dob', \Carbon\Carbon::now())}}
         </div>
         {{Form::submit('Submit',['class' => "submit"]) }}
         {!! Form::close() !!}

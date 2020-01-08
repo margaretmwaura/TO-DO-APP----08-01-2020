@@ -19,7 +19,7 @@ class CreateToDosTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('message');
-            $table->string('date');
+            $table->date('date');
         });
     }
 
