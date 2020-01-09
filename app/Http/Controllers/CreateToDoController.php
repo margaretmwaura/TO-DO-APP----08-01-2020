@@ -27,4 +27,14 @@ class CreateToDoController extends Controller
             return view('display')->with('notes',$notes);
 
         }
+
+    public function destroy($id)
+    {
+        $employee = ToDo::find($id);
+        $employee->delete();
+        echo"delete has been called";
+        return view('create');
+
+    }
+
 }

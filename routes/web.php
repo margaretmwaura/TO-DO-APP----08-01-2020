@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/create', 'Pagescontroller@index');
 
 Route::resource('todos','CreateToDoController');
+
+Route::delete('deletenote/{$note}','Deleting@destroy');

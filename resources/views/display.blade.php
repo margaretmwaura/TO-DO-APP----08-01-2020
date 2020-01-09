@@ -8,7 +8,6 @@
             <th>TITLE</th>
             <th>MESSAGE</th>
             <th>DAY</th>
-            <th>UPDATE</th>
             <th>DELETE</th>
         </tr>
         </thead>
@@ -19,7 +18,11 @@
             <td>{{ $note -> title  }}</td>
             <td>{{ $note -> message }}</td>
             <td>{{ $note -> date}}</td>
-            <td><button>DELETE</button></td>
+            <td>{!! Form::open(['action'=> ['CreateToDoController@destroy'  , $note -> id], 'method' =>'POST']) !!}
+                {{Form::submit('DELETE EVENT' , ['class' => 'delete'])}}
+                {{Form::hidden('_method' ,'DELETE')}}
+                {!! Form::close() !!}
+            </td>
         </tr>
             @endforeach
         </tbody>
